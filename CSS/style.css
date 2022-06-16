@@ -1,18 +1,19 @@
 :root{
     --colorPrimario: #4C7DFE;
-    --colorSecundario:#A3BCFC;
-    --blanco: #FFFFF;
-    --lineatGradient: linear-gradient(142.22deg, #4C7DFE 21.83%, #003DDB 78.88%);
-    --plomo: rgba(0,0,0,0.5)
+    --colorSecundario: #A3BCFC;
+    --blanco: #FFFFFF;
+    --linearGradient: linear-gradient(142.22deg, #4C7DFE 21.83%, #003DDB 78.88%);
+    --plomo:rgba(0, 0, 0, 0.5);
 
-    /* fuentes */
-    --poppins: font-family: 'Poppins', sans-serif;
-    
+    /* Fuentes */
+    --poppins: 'Poppins', sans-serif;
+
 }
 
 body{
     padding: 0;
     margin: 0;
+    font-family: var(--poppins);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -26,6 +27,107 @@ a{
 li{
     list-style: none;
 }
+
 ul,ol{
-    padding:0 !important;
+    padding: 0 !important;
+}
+
+/* ====Header==== */
+
+.header{
+    display: flex;
+    align-items: center; /*Horizontal*/
+    justify-content: space-around; /*Vertical*/
+    padding-top:30px;
+}
+
+.logo img{
+    width: 63px;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu li{
+    margin-right: 65px;
+}
+
+.menu li:last-child{
+    margin-right: 0;
+}
+
+.menu a{
+    color: var(--plomo);
+    font-size: 16px; /*tamaño de Fuente*/
+    text-transform: capitalize; /*Mayusculas*/
+}
+
+.menu a:hover{
+    color: black;
+}
+
+/* =====Fin Header==== */
+
+/* ====Main==== */
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 657px;
+}
+
+.main-descripcion h3{
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--colorPrimario);
+}
+
+.main-descripcion h1{
+    font-size: 85px;
+    font-weight: 600;
+}
+
+.main-descripcion p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--plomo);
+}
+
+.main-botones{
+    width: 411px;
+    display: flex;
+    justify-content: space-between; /*Poner un espacio en medio*/
+    align-items: center;
+    margin-top: 26px;
+}
+.main-botones a:first-child{
+    background-color: var(--colorPrimario);
+    padding: 16px 24px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: var(--blanco);
+}
+
+.main-botones a:last-child{
+    background-color: transparent;
+    padding: 16px 24px;
+    font-size: 20px;
+    border: 2px solid var(--colorPrimario);
+    border-radius: 5px;
+    color: var(--colorPrimario);
+}
+
+.main-image img{
+    width: 623px;
 }
